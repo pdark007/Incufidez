@@ -1,9 +1,8 @@
 package com.pdark007.HolaMundo;
 
 import android.app.Activity;
-import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,9 +12,6 @@ public class QuienesSomos extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String TAG = "QuienesSomos";
 
-    // TODO: Rename and change types of parameters
-    private String mparametro1;
-    private int mparametro2;
 
     private OnFragmentInteractionListener mListener;
 
@@ -34,9 +30,7 @@ public class QuienesSomos extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mparametro1 = getArguments().getString(TAG);
-        }
+
     }
 
     @Override
@@ -46,8 +40,8 @@ public class QuienesSomos extends Fragment {
         return inflater.inflate(R.layout.fragment_quienes_somos, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-   /* public void onButtonPressed(Uri uri) {
+    /*// TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
         if (mListener != null) {
             mListener.onFragmentInteraction(uri);
         }
@@ -72,7 +66,7 @@ public class QuienesSomos extends Fragment {
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        public void onFragmentInteraction(Bundle parameters);
+        public void onFragmentInteraction(Object objeto);
     }
 
 }

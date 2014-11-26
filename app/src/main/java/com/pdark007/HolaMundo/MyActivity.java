@@ -18,7 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //Doble implementacion de Interfaces
-public abstract class MyActivity extends Activity
+public class MyActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks, QuienesSomos.OnFragmentInteractionListener {
 
     /**
@@ -26,21 +26,7 @@ public abstract class MyActivity extends Activity
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
-    public void onFragmentIteration(Object object){
-        String idString="idnecesario";
-        String idInt="idnecesario2";
-        Bundle args= new Bundle();
-        args.putString(idString,"texto");
-        args.putInt(idInt,123);
 
-
-        QuienesSomos fragment= new QuienesSomos().newInstance(args);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        /*ft.replace(android.R.id.content, fragment, QuienesSomos.TAG);
-        ft.commit();*/
-        ft.replace(android.R.id.content, QuienesSomos.newInstance(args), QuienesSomos.TAG);
-        ft.commit();
-    }
 
     /**
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
@@ -49,7 +35,7 @@ public abstract class MyActivity extends Activity
     TextView tvsaludo;
     EditText etponertexto;
     Button bok;
-    String texto;
+    private Object objeto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,19 +45,6 @@ public abstract class MyActivity extends Activity
         tvsaludo = (TextView) findViewById(R.id.tvSaludo);
         etponertexto = (EditText) findViewById(R.id.etPonerTexto);
         bok = (Button) findViewById(R.id.bOk);
-       /* String idString="idnecesario";
-        String idInt="idnecesario2";
-        Bundle args= new Bundle();
-        args.putString(idString,"texto");
-        args.putInt(idInt,123);
-
-
-        QuienesSomos fragment= new QuienesSomos().newInstance(args);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(android.R.id.content, fragment, QuienesSomos.TAG);
-        ft.commit();
-*/
-
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -86,8 +59,8 @@ public abstract class MyActivity extends Activity
 
 
     public void metodobotonok (View botonokpresionado){
-        texto=etponertexto.getText().toString().trim();
-        Toast mensajeTemporal =Toast.makeText(this,texto,Toast.LENGTH_SHORT);
+        onFragmentInteraction(null);
+        Toast mensajeTemporal =Toast.makeText(this,etponertexto.getText().toString().trim(),Toast.LENGTH_SHORT);
         mensajeTemporal.show();
     }
 
@@ -174,7 +147,18 @@ public abstract class MyActivity extends Activity
         return super.onOptionsItemSelected(item);
     }
 
-     /**
+    @Override
+    public void onFragmentInteraction(Object objeto) {
+        String message = (String) objeto;
+        Bundle bundle = new Bundle();
+        bundle.putString("message", message);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
+        ft.replace(android.R.id.content, QuienesSomos.newInstance(null), QuienesSomos.TAG);
+        ft.addToBackStack(null);
+        ft.commit();
+    }
+
+    /**
      * A placeholder fragment containing a simple view.
      */
     public static class PlaceholderFragment extends Fragment {

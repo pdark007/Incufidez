@@ -25,5 +25,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_informacion">Informacion</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="FragmentText">texto de un fragment</string>
 
 </resources>

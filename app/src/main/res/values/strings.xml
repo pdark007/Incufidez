@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">INCUFIDEZ</string>
+    <string name="title_section1">¿Quiénes somos?</string>
+    <string name="title_section2">Información</string>
+    <string name="title_section3">¿Cómo llegar?</string>
+    <string name="title_section4">Disciplinas</string>
+    <string name="title_section5">Torneos/Encuentros</string>
+    <string name="title_section6">Clases/Cursos</string>
+    <string name="title_section7">Calendarios</string>
+    <string name="title_section8">Horarios</string>
+    <string name="title_section9">Reglamento</string>
+    <string name="title_section10">Requisitos</string>
+    <string name="title_section11">Cuotas</string>
+    <string name="title_section12">Cambiar Tema</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Acción De Ejemplo</string>
+    <string name="action_settings">Salir</string>
+    <string name="Saludo">Hola ._.</string>
+    <string name="Pista">Introduce texto aquí</string>
+    <string name="Ok">OK</string>
+    <string name="title_activity_quienes_somos">QuienesSomos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+</resources>

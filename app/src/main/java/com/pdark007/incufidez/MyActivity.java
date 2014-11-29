@@ -1,4 +1,4 @@
-package com.pdark007.HolaMundo;
+package com.pdark007.incufidez;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -52,8 +52,8 @@ public class MyActivity extends Activity
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
-                com.pdark007.HolaMundo.R.id.navigation_drawer,
-                (DrawerLayout) findViewById(com.pdark007.HolaMundo.R.id.drawer_layout));
+                R.id.navigation_drawer,
+                (DrawerLayout) findViewById(R.id.drawer_layout));
     }
 
 
@@ -69,47 +69,47 @@ public class MyActivity extends Activity
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
-                .replace(com.pdark007.HolaMundo.R.id.container, PlaceholderFragment.newInstance(position + 1))
+                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
     }
 
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section1);
+                mTitle = getString(R.string.title_section1);
                 break;
             case 2:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section2);
+                mTitle = getString(R.string.title_section2);
                 break;
             case 3:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section3);
+                mTitle = getString(R.string.title_section3);
                 break;
             case 4:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section4);
+                mTitle = getString(R.string.title_section4);
                 break;
             case 5:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section5);
+                mTitle = getString(R.string.title_section5);
                 break;
             case 6:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section6);
+                mTitle = getString(R.string.title_section6);
                 break;
             case 7:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section7);
+                mTitle = getString(R.string.title_section7);
                 break;
             case 8:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section8);
+                mTitle = getString(R.string.title_section8);
                 break;
             case 9:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section9);
+                mTitle = getString(R.string.title_section9);
                 break;
             case 10:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section10);
+                mTitle = getString(R.string.title_section10);
                 break;
             case 11:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section11);
+                mTitle = getString(R.string.title_section11);
                 break;
             case 12:
-                mTitle = getString(com.pdark007.HolaMundo.R.string.title_section12);
+                mTitle = getString(R.string.title_section12);
                 break;
         }
     }
@@ -128,7 +128,7 @@ public class MyActivity extends Activity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(com.pdark007.HolaMundo.R.menu.my, menu);
+            getMenuInflater().inflate(R.menu.my, menu);
             restoreActionBar();
             return true;
         }
@@ -141,7 +141,7 @@ public class MyActivity extends Activity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == com.pdark007.HolaMundo.R.id.action_settings) {
+        if (id == R.id.action_settings) {
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -186,7 +186,7 @@ public class MyActivity extends Activity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(com.pdark007.HolaMundo.R.layout.fragment_my, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_my, container, false);
             return rootView;
         }
 

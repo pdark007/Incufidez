@@ -1,4 +1,4 @@
-package com.pdark007.HolaMundo;
+package com.pdark007.incufidez;
 
 
 import android.app.Activity;
@@ -90,7 +90,7 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         mDrawerListView = (ListView) inflater.inflate(
-                com.pdark007.HolaMundo.R.layout.fragment_navigation_drawer, container, false);
+                R.layout.fragment_navigation_drawer, container, false);
         mDrawerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -102,18 +102,18 @@ public class NavigationDrawerFragment extends Fragment {
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
                 new String[]{
-                        getString(com.pdark007.HolaMundo.R.string.title_section1),
-                        getString(com.pdark007.HolaMundo.R.string.title_section2),
-                        getString(com.pdark007.HolaMundo.R.string.title_section3),
-                        getString(com.pdark007.HolaMundo.R.string.title_section4),
-                        getString(com.pdark007.HolaMundo.R.string.title_section5),
-                        getString(com.pdark007.HolaMundo.R.string.title_section6),
-                        getString(com.pdark007.HolaMundo.R.string.title_section7),
-                        getString(com.pdark007.HolaMundo.R.string.title_section8),
-                        getString(com.pdark007.HolaMundo.R.string.title_section9),
-                        getString(com.pdark007.HolaMundo.R.string.title_section10),
-                        getString(com.pdark007.HolaMundo.R.string.title_section11),
-                        getString(com.pdark007.HolaMundo.R.string.title_section12),
+                        getString(R.string.title_section1),
+                        getString(R.string.title_section2),
+                        getString(R.string.title_section3),
+                        getString(R.string.title_section4),
+                        getString(R.string.title_section5),
+                        getString(R.string.title_section6),
+                        getString(R.string.title_section7),
+                        getString(R.string.title_section8),
+                        getString(R.string.title_section9),
+                        getString(R.string.title_section10),
+                        getString(R.string.title_section11),
+                        getString(R.string.title_section12),
                 }));
         mDrawerListView.setItemChecked(mCurrentSelectedPosition, true);
         return mDrawerListView;
@@ -134,7 +134,7 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerLayout = drawerLayout;
 
         // set a custom shadow that overlays the main content when the drawer opens
-        mDrawerLayout.setDrawerShadow(com.pdark007.HolaMundo.R.drawable.drawer_shadow, GravityCompat.START);
+        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
         ActionBar actionBar = getActionBar();
@@ -146,9 +146,9 @@ public class NavigationDrawerFragment extends Fragment {
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                com.pdark007.HolaMundo.R.drawable.ic_drawer,             /* nav drawer image to replace 'Up' caret */
-                com.pdark007.HolaMundo.R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
-                com.pdark007.HolaMundo.R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
+                R.drawable.ic_drawer,             /* nav drawer image to replace 'Up' caret */
+                R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
+                R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
         ) {
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -244,7 +244,7 @@ public class NavigationDrawerFragment extends Fragment {
         // If the drawer is open, show the global app actions in the action bar. See also
         // showGlobalContextActionBar, which controls the top-left area of the action bar.
         if (mDrawerLayout != null && isDrawerOpen()) {
-            inflater.inflate(com.pdark007.HolaMundo.R.menu.global, menu);
+            inflater.inflate(R.menu.global, menu);
             showGlobalContextActionBar();
         }
         super.onCreateOptionsMenu(menu, inflater);
@@ -256,7 +256,7 @@ public class NavigationDrawerFragment extends Fragment {
             return true;
         }
 
-        if (item.getItemId() == com.pdark007.HolaMundo.R.id.action_example) {
+        if (item.getItemId() == R.id.action_example) {
             Toast.makeText(getActivity(), "No Hago Nada o 3o", Toast.LENGTH_SHORT).show();
             return true;
         }
@@ -272,7 +272,7 @@ public class NavigationDrawerFragment extends Fragment {
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayShowTitleEnabled(true);
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
-        actionBar.setTitle(com.pdark007.HolaMundo.R.string.app_name);
+        actionBar.setTitle(R.string.app_name);
     }
 
     private ActionBar getActionBar() {

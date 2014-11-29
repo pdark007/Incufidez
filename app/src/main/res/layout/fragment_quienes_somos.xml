@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pdark007.HolaMundo.QuienesSomos"
-    android:background="#ff50ff4b"
+    tools:context="com.pdark007.incufidez.QuienesSomos"
+    android:background="#ff6d84ff"
     android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->

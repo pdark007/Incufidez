@@ -36,9 +36,17 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Ok"
-                android:id="@+id/bOk"
-                android:onClick="metodobotonok"/>
+                android:text="@string/quienes"
+                android:id="@+id/btnquienessomos"
+                android:onClick="metodobtnquienessomos"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/como"
+                android:id="@+id/btncomollegar"
+                android:onClick="metodobtncomollegar"/>
+
         </LinearLayout>
     </FrameLayout>
 

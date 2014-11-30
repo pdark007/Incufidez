@@ -20,11 +20,13 @@
     <string name="action_settings">Salir</string>
     <string name="Saludo">Hola ._.</string>
     <string name="Pista">Introduce texto aquí</string>
-    <string name="Ok">OK</string>
+    <string name="quienes">quienes somos</string>
+    <string name="como">como llegar</string>
     <string name="title_activity_quienes_somos">QuienesSomos</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_informacion">Informacion</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="FragmentText">texto de un fragment</string>
+    <string name="title_activity_como_llegar">ComoLlegar</string>
 
 </resources>

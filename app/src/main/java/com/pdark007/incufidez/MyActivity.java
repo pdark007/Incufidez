@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
@@ -32,9 +33,10 @@ public class MyActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    TextView tvsaludo;
-    EditText etponertexto;
-    Button bok;
+    private TextView tvsaludo;
+    private EditText etponertexto;
+    private Button btnquienessomos;
+    private Button btncomollegar;
     private Object objeto;
 
     @Override
@@ -44,7 +46,9 @@ public class MyActivity extends Activity
 
         tvsaludo = (TextView) findViewById(R.id.tvSaludo);
         etponertexto = (EditText) findViewById(R.id.etPonerTexto);
-        bok = (Button) findViewById(R.id.bOk);
+        btnquienessomos = (Button) findViewById(R.id.btnquienessomos);
+        btncomollegar= (Button) findViewById(R.id.btncomollegar);
+
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -58,8 +62,15 @@ public class MyActivity extends Activity
 
 
 
-    public void metodobotonok (View botonokpresionado){
+    public void metodobtnquienessomos (View botonpresionado){
         onFragmentInteraction(null);
+        Toast mensajeTemporal =Toast.makeText(this,etponertexto.getText().toString().trim(),Toast.LENGTH_SHORT);
+        mensajeTemporal.show();
+    }
+
+    public void metodobtncomollegar (View botonpresionado){
+        Intent intent= new Intent(this,ComoLlegar.class);
+        this.startActivity(intent);
         Toast mensajeTemporal =Toast.makeText(this,etponertexto.getText().toString().trim(),Toast.LENGTH_SHORT);
         mensajeTemporal.show();
     }

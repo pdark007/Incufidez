@@ -5,18 +5,14 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
 
 //Doble implementacion de Interfaces
 public class MyActivity extends Activity
@@ -33,22 +29,11 @@ public class MyActivity extends Activity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    private TextView tvsaludo;
-    private EditText etponertexto;
-    private Button btnquienessomos;
-    private Button btncomollegar;
-    private Object objeto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-
-        tvsaludo = (TextView) findViewById(R.id.tvSaludo);
-        etponertexto = (EditText) findViewById(R.id.etPonerTexto);
-        btnquienessomos = (Button) findViewById(R.id.btnquienessomos);
-        btncomollegar= (Button) findViewById(R.id.btncomollegar);
-
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -58,21 +43,6 @@ public class MyActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-    }
-
-
-
-    public void metodobtnquienessomos (View botonpresionado){
-        onFragmentInteraction(null);
-        Toast mensajeTemporal =Toast.makeText(this,etponertexto.getText().toString().trim(),Toast.LENGTH_SHORT);
-        mensajeTemporal.show();
-    }
-
-    public void metodobtncomollegar (View botonpresionado){
-        Intent intent= new Intent(this,ComoLlegar.class);
-        this.startActivity(intent);
-        Toast mensajeTemporal =Toast.makeText(this,etponertexto.getText().toString().trim(),Toast.LENGTH_SHORT);
-        mensajeTemporal.show();
     }
 
     @Override
@@ -85,8 +55,10 @@ public class MyActivity extends Activity
     }
 
     public void onSectionAttached(int number) {
+        Fragment fragment = null;
         switch (number) {
             case 1:
+                fragment = new QuienesSomos();
                 mTitle = getString(R.string.title_section1);
                 break;
             case 2:
@@ -122,6 +94,14 @@ public class MyActivity extends Activity
             case 12:
                 mTitle = getString(R.string.title_section12);
                 break;
+        }
+        if (fragment != null) {
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, fragment).commit();
+        } else {
+            // error in creating fragment
+            Log.e("MyActivity", "Error in creating fragment");
         }
     }
 

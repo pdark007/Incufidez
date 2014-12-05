@@ -2,18 +2,23 @@ package com.pdark007.incufidez;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class QuienesSomos extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     public static final String TAG = "QuienesSomos";
-       private OnFragmentInteractionListener mListener;
-    private LinearLayout mlinearLayout;
+    private OnFragmentInteractionListener mListener;
+
+    private EditText etponertexto;
+    private Button btncomollegar;
 
     // TODO: Rename and change types and number of parameters
     public static QuienesSomos newInstance(Bundle args) {
@@ -35,8 +40,8 @@ public class QuienesSomos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mlinearLayout= (LinearLayout) inflater.inflate(R.layout.fragment_quienes_somos, container, false);
-        return  mlinearLayout;
+        View rootView=inflater.inflate(R.layout.fragment_quienes_somos, container, false);
+        return  rootView;
 
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_quienes_somos, container, false);
@@ -71,4 +76,22 @@ public class QuienesSomos extends Fragment {
         public void onFragmentInteraction(Object objeto);
     }
 
+    public void initControls(){
+        etponertexto = (EditText) getView().findViewById(R.id.etTexto);
+        btncomollegar= (Button) getView().findViewById(R.id.btncomollegar);
+
+        btncomollegar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),ComoLlegar.class);
+                startActivity(intent);
+                Toast.makeText(getActivity(), etponertexto.getText().toString().trim(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    @Override
+    public void onStart(){
+        super.onStart();
+        initControls();
+    }
 }

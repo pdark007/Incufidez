@@ -20,7 +20,7 @@
     <string name="action_settings">Salir</string>
     <string name="Saludo">Hola ._.</string>
     <string name="Pista">Introduce texto aquí</string>
-    <string name="quienes">quienes somos</string>
+    <string name="quienes">soy el Fragment quienes somos</string>
     <string name="como">como llegar</string>
     <string name="title_activity_quienes_somos">QuienesSomos</string>
     <string name="hello_world">Hello world!</string>

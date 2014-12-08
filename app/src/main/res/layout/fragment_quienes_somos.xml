@@ -6,30 +6,14 @@
     android:background="#fffffbc0"
     android:orientation="vertical"
     android:gravity="center_vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/Saludo"
-            android:id="@+id/tvSaludo" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/etTexto"
-            android:hint="@string/Pista" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quienes"
-            android:id="@+id/etquienessomos"
+            android:text="@string/txtquienessomos"
+            android:id="@+id/tvquienessomos"
             android:textSize="25dp"
             android:gravity="center" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/como"
-            android:id="@+id/btncomollegar"/>
 </LinearLayout>

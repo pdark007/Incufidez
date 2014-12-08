@@ -17,16 +17,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Acción De Ejemplo</string>
     <string name="action_settings">Salir</string>
-    <string name="Saludo">Hola ._.</string>
-    <string name="Pista">Introduce texto aquí</string>
-    <string name="quienes">soy el Fragment quienes somos</string>
-    <string name="como">como llegar</string>
-    <string name="title_activity_quienes_somos">QuienesSomos</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_informacion">Informacion</string>
-    <string name="title_activity_splash">SplashActivity</string>
-    <string name="FragmentText">texto de un fragment</string>
-    <string name="title_activity_como_llegar">ComoLlegar</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtquienessomos">Soy el Fragment quienes somos</string>
+    <string name="txtcomollegar">no se como llegar</string>
+    <string name="txtfaltainformacion">Falta Información</string>
 
 </resources>

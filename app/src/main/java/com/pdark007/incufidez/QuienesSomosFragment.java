@@ -2,14 +2,10 @@ package com.pdark007.incufidez;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class QuienesSomosFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
@@ -17,8 +13,6 @@ public class QuienesSomosFragment extends Fragment {
     public static final String TAG = "QuienesSomosFragment";
     private OnFragmentInteractionListener mListener;
 
-    private EditText etponertexto;
-    private Button btncomollegar;
 
     // TODO: Rename and change types and number of parameters
     public static QuienesSomosFragment newInstance(Bundle args) {
@@ -77,19 +71,7 @@ public class QuienesSomosFragment extends Fragment {
     }
 
     public void initControls(){
-        etponertexto = (EditText) getView().findViewById(R.id.etTexto);
-        btncomollegar= (Button) getView().findViewById(R.id.btncomollegar);
 
-        btncomollegar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, ComoLlegarFragment.newInstance("Hola","Mundo"))
-                        .commit();
-                Toast.makeText(getActivity(), etponertexto.getText().toString().trim(), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
     @Override
     public void onStart(){

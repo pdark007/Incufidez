@@ -2,7 +2,7 @@ package com.pdark007.incufidez;
 
 import android.app.Activity;
 import android.app.Fragment;
-import android.content.Intent;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,24 +11,24 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class QuienesSomos extends Fragment {
+public class QuienesSomosFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    public static final String TAG = "QuienesSomos";
+    public static final String TAG = "QuienesSomosFragment";
     private OnFragmentInteractionListener mListener;
 
     private EditText etponertexto;
     private Button btncomollegar;
 
     // TODO: Rename and change types and number of parameters
-    public static QuienesSomos newInstance(Bundle args) {
-        QuienesSomos fragment = new QuienesSomos();
+    public static QuienesSomosFragment newInstance(Bundle args) {
+        QuienesSomosFragment fragment = new QuienesSomosFragment();
         if (args != null) {
             fragment.setArguments(args);
         }
         return fragment;
     }
-    public QuienesSomos() {
+    public QuienesSomosFragment() {
         // Required empty public constructor
     }
 
@@ -83,8 +83,10 @@ public class QuienesSomos extends Fragment {
         btncomollegar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent= new Intent(getActivity(),ComoLlegar.class);
-                startActivity(intent);
+                FragmentManager fragmentManager = getFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, ComoLlegarFragment.newInstance("Hola","Mundo"))
+                        .commit();
                 Toast.makeText(getActivity(), etponertexto.getText().toString().trim(), Toast.LENGTH_SHORT).show();
             }
         });

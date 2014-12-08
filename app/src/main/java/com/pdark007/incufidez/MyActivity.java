@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
@@ -16,13 +17,12 @@ import android.view.ViewGroup;
 
 //Doble implementacion de Interfaces
 public class MyActivity extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, QuienesSomos.OnFragmentInteractionListener {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, QuienesSomosFragment.OnFragmentInteractionListener, ComoLlegarFragment.OnFragmentInteractionListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
     private NavigationDrawerFragment mNavigationDrawerFragment;
-
 
 
     /**
@@ -46,7 +46,7 @@ public class MyActivity extends Activity
     }
 
     @Override
-   public void onNavigationDrawerItemSelected(int position) {
+    public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
@@ -58,13 +58,14 @@ public class MyActivity extends Activity
         Fragment fragment = null;
         switch (number) {
             case 1:
-                fragment = new QuienesSomos();
+                fragment = new QuienesSomosFragment();
                 mTitle = getString(R.string.title_section1);
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
                 break;
             case 3:
+                fragment = new ComoLlegarFragment();
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
@@ -90,9 +91,6 @@ public class MyActivity extends Activity
                 break;
             case 11:
                 mTitle = getString(R.string.title_section11);
-                break;
-            case 12:
-                mTitle = getString(R.string.title_section12);
                 break;
         }
         if (fragment != null) {
@@ -144,9 +142,14 @@ public class MyActivity extends Activity
         Bundle bundle = new Bundle();
         bundle.putString("message", message);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(android.R.id.content, QuienesSomos.newInstance(null), QuienesSomos.TAG);
+        ft.replace(android.R.id.content, QuienesSomosFragment.newInstance(null), QuienesSomosFragment.TAG);
         ft.addToBackStack(null);
         ft.commit();
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /**
@@ -176,7 +179,7 @@ public class MyActivity extends Activity
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
+                                 Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_my, container, false);
             return rootView;
         }

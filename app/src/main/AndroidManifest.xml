@@ -45,10 +45,6 @@
             android:label="@string/title_activity_splash" >
         </activity>
         -->
-        <activity
-            android:name="com.pdark007.incufidez.ComoLlegar"
-            android:label="@string/title_activity_como_llegar" >
-        </activity>
     </application>
 
 </manifest>

@@ -6,19 +6,23 @@
     <string name="title_section2">Información</string>
     <string name="title_section3">¿Cómo llegar?</string>
     <string name="title_section4">Disciplinas</string>
-    <string name="title_section5">Torneos/Encuentros</string>
-    <string name="title_section6">Clases/Cursos</string>
-    <string name="title_section7">Calendarios</string>
-    <string name="title_section8">Horarios</string>
-    <string name="title_section9">Reglamento</string>
-    <string name="title_section10">Requisitos</string>
-    <string name="title_section11">Cuotas</string>
+    <string name="title_section5">Eventos</string>
+    <string name="title_section6">Cursos</string>
+    <string name="title_section7">Horarios</string>
+    <string name="title_section8">Reglamento</string>
+    <string name="title_section9">Requisitos</string>
+    <string name="title_section10">Cuotas</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Acción De Ejemplo</string>
     <string name="action_settings">Salir</string>
-    <string name="txtquienessomos">Soy el Fragment quienes somos</string>
-    <string name="txtcomollegar">no se como llegar</string>
+    <string name="txtmisiontitulo">Misión</string>
+    <string name="txtvisiontitulo">Visión</string>
+    <string name="txtvalorestitulo">Valores</string>
+    <string name="txtmision">Hacer de las actividades acuáticas una práctica permanente en la sociedad zacatecana, la cual generara  grandes beneficios a la salud física y mental, seguridad y rehabilitación, aportando las óptimas condiciones para la práctica de esta disciplina.</string>
+    <string name="txtvision">Fomentar y ampliar la capacitación constante de nuestro personal para lograr desarrollar la práctica de la natación en todos sus niveles, enseñanza infantil, juvenil, adultos y grupos especiales, así como en el alto rendimiento.</string>
+    <string name="txtvalores">Disciplina, optimismo, respeto, actitud y trabajo en equipo.</string>
+    <string name="txtcomollegar">No sé como llegar</string>
     <string name="txtfaltainformacion">Falta Información</string>
 
 </resources>

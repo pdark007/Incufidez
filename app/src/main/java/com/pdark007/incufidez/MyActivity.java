@@ -89,9 +89,6 @@ public class MyActivity extends Activity
             case 10:
                 mTitle = getString(R.string.title_section10);
                 break;
-            case 11:
-                mTitle = getString(R.string.title_section11);
-                break;
         }
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();

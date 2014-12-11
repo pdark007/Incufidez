@@ -22,7 +22,10 @@
     <string name="txtmision">Hacer de las actividades acuáticas una práctica permanente en la sociedad zacatecana, la cual generara  grandes beneficios a la salud física y mental, seguridad y rehabilitación, aportando las óptimas condiciones para la práctica de esta disciplina.</string>
     <string name="txtvision">Fomentar y ampliar la capacitación constante de nuestro personal para lograr desarrollar la práctica de la natación en todos sus niveles, enseñanza infantil, juvenil, adultos y grupos especiales, así como en el alto rendimiento.</string>
     <string name="txtvalores">Disciplina, optimismo, respeto, actitud y trabajo en equipo.</string>
-    <string name="txtcomollegar">No sé como llegar</string>
+    <string name="txtcomollegar">¿No sabes cómo llegar?</string>
     <string name="txtfaltainformacion">Falta Información</string>
+    <string name="txtdirecciontitulo">Dirección</string>
+    <string name="txtdireccion">AOZ, Preparatoria, Unidad Deportiva, 98064 Guadalupe, Zacatecas</string>
+
 
 </resources>

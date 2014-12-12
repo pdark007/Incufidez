@@ -4,7 +4,6 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -15,9 +14,22 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-//Doble implementacion de Interfaces
+//Multiple implementacion de Interfaces
 public class MyActivity extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks, QuienesSomosFragment.OnFragmentInteractionListener, ComoLlegarFragment.OnFragmentInteractionListener {
+        implements
+        NavigationDrawerFragment.NavigationDrawerCallbacks,
+        QuienesSomosFragment.OnFragmentInteractionListener,
+        InformacionFragment.OnFragmentInteractionListener,
+        ComoLlegarFragment.OnFragmentInteractionListener,
+        DisciplinasFragment.OnFragmentInteractionListener,
+        EventosFragment.OnFragmentInteractionListener,
+        CursosFragment.OnFragmentInteractionListener,
+        HorariosFragment.OnFragmentInteractionListener,
+        ReglamentoFragment.OnFragmentInteractionListener,
+        RequisitosFragment.OnFragmentInteractionListener,
+        CuotasFragment.OnFragmentInteractionListener
+
+{
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -62,6 +74,7 @@ public class MyActivity extends Activity
                 mTitle = getString(R.string.title_section1);
                 break;
             case 2:
+                fragment = new InformacionFragment();
                 mTitle = getString(R.string.title_section2);
                 break;
             case 3:
@@ -69,24 +82,31 @@ public class MyActivity extends Activity
                 mTitle = getString(R.string.title_section3);
                 break;
             case 4:
+                fragment = new DisciplinasFragment();
                 mTitle = getString(R.string.title_section4);
                 break;
             case 5:
+                fragment = new EventosFragment();
                 mTitle = getString(R.string.title_section5);
                 break;
             case 6:
+                fragment = new CursosFragment();
                 mTitle = getString(R.string.title_section6);
                 break;
             case 7:
+                fragment = new HorariosFragment();
                 mTitle = getString(R.string.title_section7);
                 break;
             case 8:
+                fragment = new ReglamentoFragment();
                 mTitle = getString(R.string.title_section8);
                 break;
             case 9:
+                fragment = new RequisitosFragment();
                 mTitle = getString(R.string.title_section9);
                 break;
             case 10:
+                fragment = new CuotasFragment();
                 mTitle = getString(R.string.title_section10);
                 break;
         }
@@ -131,17 +151,6 @@ public class MyActivity extends Activity
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onFragmentInteraction(Object objeto) {
-        String message = (String) objeto;
-        Bundle bundle = new Bundle();
-        bundle.putString("message", message);
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        ft.replace(android.R.id.content, QuienesSomosFragment.newInstance(null), QuienesSomosFragment.TAG);
-        ft.addToBackStack(null);
-        ft.commit();
     }
 
     @Override

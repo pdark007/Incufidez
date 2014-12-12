@@ -26,6 +26,6 @@
     <string name="txtfaltainformacion">Falta Información</string>
     <string name="txtdirecciontitulo">Dirección</string>
     <string name="txtdireccion">AOZ, Preparatoria, Unidad Deportiva, 98064 Guadalupe, Zacatecas</string>
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

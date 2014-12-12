@@ -63,19 +63,11 @@ public class ComoLlegarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_como_llegar, container, false);
         // Inflate the layout for this fragment
-        return rootView;
+        return inflater.inflate(R.layout.fragment_como_llegar, container, false);
+
     }
 
-    public void initControls(){
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        initControls();
-    }
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

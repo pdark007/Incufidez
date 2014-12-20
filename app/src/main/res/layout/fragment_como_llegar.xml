@@ -48,11 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:contentDescription="@string/txtcomollegar"
-            android:src="@drawable/mapa_estatico"
+            android:src="@drawable/mapaestatico"
             android:layout_below="@+id/textView3"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
     </RelativeLayout>
-
-
 </FrameLayout>
